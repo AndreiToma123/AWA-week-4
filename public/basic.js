@@ -1,22 +1,19 @@
-fetch('/recipe/pizza')
+fetch('http://localhost:8000/recipe/pizza')
   .then(response => response.json())
   .then(recipe => {
     document.getElementById('recipe-name').innerText = `${recipe.name}`;
+    const instructionList = document.getElementById('recipe-instructions');
+    const ingredientList = document.getElementById('recipe-ingredients');
 
-    const instructionsList = document.getElementById('recipe-instructions');
-    recipe.instructions.forEach(instruction => {
+    recipe.instructions.forEach(i => {
       const li = document.createElement('li');
-      li.innerText = instruction;
-      instructionsList.appendChild(li);
+      li.innerText = i;
+      instructionList.appendChild(li);
     });
 
-    const ingredientsList = document.getElementById('recipe-ingredients');
-    recipe.ingredients.forEach(ingredient => {
+    recipe.ingredients.forEach(i => {
       const li = document.createElement('li');
-      li.innerText = ingredient;
-      ingredientsList.appendChild(li);
+      li.innerText = i;
+      ingredientList.appendChild(li);
     });
-  })
-  .catch(error => {
-    console.error('Error fetching recipe:', error);
   });
