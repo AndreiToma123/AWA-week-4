@@ -4,9 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Recipe Page</title>
-  <script src="basic.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
 <body>
 
@@ -17,18 +15,18 @@
       </ul>
     </div>
   </nav>
+    
 
   <div class="container">
-
+    <h1 id="recipe-name"></h1>
     <div class="col">
-      <h1 id="recipe-name"></h1>
       <h2>Ingredients:</h2>
       <ul id="recipe-ingredients"></ul>
       <h2>Instructions:</h2>
       <ul id="recipe-instructions"></ul>
-    </div>
+    </div> 
 
-    <div class="col">
+    <div class="col"> 
       <input type="text" id="name-text">
       <h4>Ingredients</h4>
       <textarea id="ingredients-text"></textarea>
@@ -40,6 +38,8 @@
     </div>
 
   </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="basic.js"></script>
 
 </body>
 </html>

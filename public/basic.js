@@ -1,7 +1,7 @@
 fetch('/recipe/pizza')
   .then(response => response.json())
   .then(recipe => {
-    document.getElementById('recipe-name').innerText = `${recipe.name} recipe`;
+    document.getElementById('recipe-name').innerText = `${recipe.name}`;
 
     const instructionsList = document.getElementById('recipe-instructions');
     recipe.instructions.forEach(instruction => {

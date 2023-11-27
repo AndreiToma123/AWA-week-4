@@ -18,8 +18,8 @@ app.get('/recipe/:food', (req, res) => {
   ];
 
   const recipeIngredients = [
-    'Something fresh',
-    'Something healthy',
+    '1) Something fresh',
+    '2) Something healthy',
   ];
 
   const recipe = {
